@@ -1,0 +1,18 @@
+body {
+	height: auto;
+	width: auto;
+	background-image: url("../images/italianmtns.jpg");
+	background-attachment: fixed;
+	background-position: left top;
+	background-size: 100% auto;
+	// font-color to something noticeable for now
+	color: white
+}
+
+a {
+	text-decoration: none;
+}
+
+header {
+	background-color: #505050;
+}
