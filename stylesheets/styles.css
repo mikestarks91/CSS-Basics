@@ -1,18 +1,70 @@
+* {
+	-webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+  	/*This puts border and padding inside element for all elements*/
+}
+
 body {
 	height: auto;
 	width: auto;
-	background-image: url("../images/italianmtns.jpg");
-	background-attachment: fixed;
-	background-position: left top;
+	/* margin: 0; in body puts page flush against borders of window */
+	margin: 0;
+	/* background: color image repeat attachment position */
+	background: url("../images/italianmtns.jpg") no-repeat fixed left center;
 	background-size: 100% auto;
-	// font-color to something noticeable for now
-	color: white
+	/* font-color to something noticeable for now*/
+	color: black;
+	display: block;
 }
 
 a {
 	text-decoration: none;
+	color: black;
 }
 
 header {
-	background-color: #505050;
+	height: auto;
+	width: 100%;
+	background-color: white;
+	/* border: width style color*/
+	/* border-width: top right bottom left (clockwise)*/
+	padding: 20px;
+	/*This one's kind of cool for headers and things you need to draw attention to*/
+	letter-spacing: 3px;
+	word-spacing: 1px;
+}
+
+div.container {
+	border: 5px solid black;
+	width: 50%;
+	/*max-width keeps your box from getting too big when it's relative to a parent element*/
+	max-width: 500px;
+	/*Same with min-width, only for 'too small'*/
+	min-width: 250px;
+	/* margin: auto; centers element within container. Unless any of many conditions is true.*/
+	/* margin: inherit; gives element same margins as parent*/
+	margin: auto;
+	/*Unlike most css properties, font-family has to have comma separated values, because anything after the first value is a backup value*/
+	font-family: "Times New Roman", Times, serif;
+}
+
+h1#logo {
+	/*outside-of-border space around elements. No background-color, just invisible space (like a force field)*/
+	
+	text-align: center;
+	/*transform to change toggle uppercase, lowercase or capitalize*/
+	text-transform: capitalize;
+	/*text-shadow: x-value, y-value blur-radius color; fun to play with, doesn't really look all that great though.*/
+	text-shadow: -5px 5px 1px #808080;
+}
+
+ul.navbar {
+	line-height: 30px;
+}
+
+section>p {
+	text-indent: 50px;
+	line-height: 20px;
+	white-space: pre-line;
 }
