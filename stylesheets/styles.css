@@ -11,7 +11,7 @@ body {
 	/* margin: 0; in body puts page flush against borders of window */
 	margin: 0;
 	/* background: color image repeat attachment position */
-	background: url("../images/italianmtns.jpg") no-repeat fixed 50% 50%;
+	background: url("../images/italianmtns.jpg") no-repeat fixed 50% 0;
 	background-size: cover;
 	/* font-color to something noticeable for now*/
 	color: black;
