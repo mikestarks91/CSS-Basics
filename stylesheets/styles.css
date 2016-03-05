@@ -37,18 +37,28 @@ header {
 	word-spacing: 1px;
 	display: inherit;
 }
+/*'Block' display elements take up a full row (nothing can sit next to them). divs are 'block' display by default. So are these:
+<h1> - <h6>
+<p>
+<form>
+<header>
+<footer>
+<section>*/
 
 div.container {
-	/* margin: auto; centers element within container. Unless any of many conditions is true.*/
+	/* margin: auto; centers element within container. Following conditions must be true:
+	-block-level element with set width*/
 	/* margin: inherit; gives element same margins as parent*/
 	margin: auto;
 	/*Unlike most css properties, font-family has to have comma separated values, because anything after the first value is a backup value*/
 	font-family: "Times New Roman", Times, serif;
 }
 div.header {
-	border: 5px solid black;
-	width: 60%;
-	/*max-width keeps your box from getting too big when it's relative to a parent element*/
+	border: 4px solid black;
+	outline: 1px solid black;
+	outline-offset: 2px;
+	/*max-width keeps your box from getting too big when it's relative to a parent element.
+	Also allows element to shrink with browser window.*/
 	max-width: 800px;	
 	/*Same with min-width, only for 'too small'*/
 	min-width: 250px;
@@ -61,21 +71,35 @@ h1#logo {
 	/*transform to change toggle uppercase, lowercase or capitalize*/
 	text-transform: capitalize;
 	/*text-shadow: x-value, y-value blur-radius color; fun to play with, doesn't really look all that great though.*/
-	text-shadow: -5px 5px 1px #808080;
+	/*text-shadow: -5px 5px 1px #808080;*/
 	font-weight: bolder;
+	padding-top: 8px;
+	margin: 0px;
 }
 
 ul.navbar {
 	line-height: 30px;
 	/*list-style: type position image*/
 	list-style: none;
-	padding: 0px 40px;
+	padding: 0px 20px;
 	/*This will put the bullets/numbers inside the elements*/
 	/*list-style-position: inside;*/
+	display: -webkit-flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
 }
 
+/*'Inline' elements take up only as much space as they need to. Examples:
+<span>
+<a>
+<img>*/
 ul.navbar li {
 	display: inline;
+	margin: 0px 5px;
+}
+
+ul.navbar li:nth-last-child(1) {
+	border: none;
 }
 
 /*
@@ -88,7 +112,8 @@ http://www.w3schools.com/css/css_link.asp
 */
 .navbar > li > a:hover {
 	text-decoration: underline;
-	padding: 5px;
+	color: #656565;
+	padding: 3px;
 }
 
 article {
