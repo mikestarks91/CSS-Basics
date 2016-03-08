@@ -9,6 +9,7 @@ body {
 	height: auto;
 	width: 100%;
 	/* margin: 0; in body puts page flush against borders of window */
+	/*The added margin to bottom puts space between last section and footer*/
 	margin: 0;
 	/* background: color image repeat attachment position */
 	background: url("../images/italianmtns.jpg") no-repeat fixed 50% 0;
@@ -118,12 +119,12 @@ http://www.w3schools.com/css/css_link.asp
 }
 
 article {
-	display: inherit;
+	display: block;
 	width: 100%;
 }
 
 section {
-	margin: 400px 0 400px 0;
+	margin-top: 400px;
 	display: inherit;
 	width: 100%;
 	padding: 15px 30px;
@@ -230,4 +231,8 @@ ul.navbar-bottom {
 
 ul.navbar-bottom>li {
 	padding: 0 10px;
+}
+
+.navbar-bottom > li > a:hover {
+	color: white;
 }
